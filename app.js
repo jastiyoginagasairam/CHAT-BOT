@@ -5,7 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 require("./db/conn");
 const router = require("./Routes/router");
-const PORT = process.env.port;
+const port = process.env.PORT;
 const key=process.env.KEY
 
 app.use(express.json());
@@ -34,6 +34,6 @@ app.post("/chat", async (req, res) => {
 });
 
 
-app.listen(PORT,()=>{
-    console.log(`Server start at Port No :${PORT}`)
+app.listen(port,()=>{
+    console.log(`Server start at Port No :${port}`)
 })
